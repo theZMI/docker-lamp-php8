@@ -2,8 +2,8 @@
 Default docker-image for site at apache, php8, mysql
 
 # How start
-1) Clone repo
-2) From docker-lamp-php8 directory, in terminal: docker-compose build
-3) docker-compose up -d
-4) Open in browser "localhost" for show your site (your site must be in "app" folder
-5) Open "localhost:8080" for show phpMyAdmin
+1) Clone repository
+2) Run in terminal from docker-lamp-php8 directory: `docker-compose build` or `make build`
+3) After in terminal: `docker-compose up -d` or `make start`
+4) Open page in browser `localhost:81` for show your site (your site must be in `app` folder)
+5) Open page in browser `localhost:8080` for show phpMyAdmin
