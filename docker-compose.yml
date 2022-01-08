@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+
+  php:
+    build:
+      context: php-apache
+    ports:
+      - 81:80
+    volumes:
+      - ./app:/var/www/html
+
+  mariadb:
+    image: mariadb:10.7
+    ports:
+      - 127.0.0.1:3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: appdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    volumes:
+      - ./databases/mariadb:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - 127.0.0.1:8080:80
+    environment:
+      PMA_HOST: mariadb
+      PMA_USER: user
+      PMA_PASSWORD: pass
