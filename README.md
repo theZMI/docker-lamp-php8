@@ -10,10 +10,11 @@ Default docker-image for stack: apache, php8, mysql
 
 # Connect to database from script
 regular:  
-    host: mariadb  
-    port: 3306  
-    user: user  
-    password: pass  
-    db: appdb  
+> host: mariadb  
+> port: 3306  
+> user: user  
+> password: pass  
+> db: appdb  
 
-dsn variant: 'mysqli://user:pass@mariadb/appdb?charset=UTF8'  
+dsn variant:
+> mysqli://user:pass@mariadb/appdb?charset=UTF8
