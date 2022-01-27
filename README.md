@@ -9,10 +9,11 @@ Default docker-image for stack: apache, php8, mysql
 * Open page in browser `localhost:81` for show your site, `localhost:8080` for show phpMyAdmin (your databases saved into `databases` folder)
 
 # Connect to database from script
-regular:
-    host: mariadb
-    port: 3306
-    user: user
-    password: pass
-    db: appdb
-dsn variant: 'mysqli://user:pass@mariadb/appdb?charset=UTF8'
+regular:  
+    host: mariadb  
+    port: 3306  
+    user: user  
+    password: pass  
+    db: appdb  
+
+dsn variant: 'mysqli://user:pass@mariadb/appdb?charset=UTF8'  
