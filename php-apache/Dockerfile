@@ -2,8 +2,11 @@ FROM php:8.0-apache
 
 RUN apt-get update
 
-# Switch on rewrite rules for htaccess
+# Switch on rewrite rules in htaccess
 RUN a2enmod rewrite
+
+# Switch on tag Header in htaccess
+RUN a2enmod headers
 
 # Install tools required for build stage
 RUN apt-get install -fyqq \
