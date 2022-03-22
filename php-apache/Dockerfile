@@ -27,8 +27,8 @@ RUN docker-php-ext-install bcmath pdo_mysql
 
 # Install libraries for compiling GD, then build it
 RUN apt-get install -fyqq libfreetype6 libfreetype6-dev libpng16-16 libpng-dev libjpeg62-turbo libjpeg62-turbo-dev \
- && docker-php-ext-install gd \
- && apt-get remove -fyqq libfreetype6-dev libpng-dev libjpeg62-turbo-dev
+ && docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
+ && docker-php-ext-install gd
 
 # Add ZIP archives support
 RUN apt-get install -fyqq zip libzip-dev \
