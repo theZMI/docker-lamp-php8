@@ -1,4 +1,4 @@
-FROM php:8.0-apache
+FROM php:8.1-apache
 
 RUN apt-get update
 
@@ -13,7 +13,7 @@ RUN apt-get install -fyqq \
     bash curl wget rsync ca-certificates openssl ssh git tzdata openntpd \
     libxrender1 fontconfig libc6 \
     mariadb-client gnupg binutils-gold autoconf \
-    g++ gcc gnupg libgcc1 linux-headers-generic make python
+    g++ gcc gnupg libgcc1 linux-headers-generic make python3
 
 # Install MySQLi extension for php
 RUN docker-php-ext-install mysqli
