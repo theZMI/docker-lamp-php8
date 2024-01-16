@@ -30,4 +30,4 @@ services:
       PMA_HOST: mariadb
       PMA_USER: user
       PMA_PASSWORD: pass
-      UPLOAD_LIMIT: 1G
+      UPLOAD_LIMIT: 5G
