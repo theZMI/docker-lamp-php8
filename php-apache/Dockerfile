@@ -1,4 +1,4 @@
-FROM php:8.1-apache
+FROM php:8.2-apache
 
 RUN apt-get update
 
@@ -9,11 +9,8 @@ RUN a2enmod rewrite
 RUN a2enmod headers
 
 # Install tools required for build stage
-RUN apt-get install -fyqq \
-    bash curl wget rsync ca-certificates openssl ssh git tzdata openntpd \
-    libxrender1 fontconfig libc6 \
-    mariadb-client gnupg binutils-gold autoconf \
-    g++ gcc gnupg libgcc1 linux-headers-generic make python3
+RUN apt-get install -y -fyqq bash curl wget ssh rsync ca-certificates openssl ssh git tzdata openntpd libxrender1 fontconfig \
+    libc6 g++ gcc gnupg libgcc1 linux-headers-generic make python3 gnupg binutils-gold autoconf
 
 # Install MySQLi extension for php
 RUN docker-php-ext-install mysqli
