@@ -37,6 +37,9 @@ RUN apt-get install -fyqq zip libzip-dev \
 RUN pecl install xdebug \
  && docker-php-ext-enable xdebug
 
+RUN apt-get install nano
+RUN apt-get install -y vim
+
 # Enable XDebug
 ADD xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 

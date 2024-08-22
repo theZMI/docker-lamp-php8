@@ -33,4 +33,4 @@ services:
       PMA_HOST: mysqldb
       PMA_USER: user
       PMA_PASSWORD: pass
-      UPLOAD_LIMIT: 1G
+      UPLOAD_LIMIT: 5G
