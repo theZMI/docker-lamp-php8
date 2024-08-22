@@ -43,4 +43,4 @@ RUN apt-get install -y vim
 # Enable XDebug
 ADD xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
-WORKDIR /app
+WORKDIR /site
