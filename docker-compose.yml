@@ -11,6 +11,8 @@ services:
       MYSQL_PASSWORD: pass
     volumes:
       - "${APP_DIR}:/var/www/html"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   mysqldb:
     image: arm64v8/mysql:8.0.30-oracle

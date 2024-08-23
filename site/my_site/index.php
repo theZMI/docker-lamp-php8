@@ -7,8 +7,11 @@ try {
         getenv('MYSQL_USER'),
         getenv('MYSQL_PASSWORD')
     );
+    echo "<h1>MySql version:</h1>";
     echo "<xmp>";
     foreach ($dbh->query('SELECT @@version') as $row) {
+        $rand = mt_rand(1, 3);
+        echo "RAND={$rand}<br>";
         print_r($row);
     }
     $dbh = null;
