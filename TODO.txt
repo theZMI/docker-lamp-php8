@@ -8,5 +8,5 @@
         > GRANT ALL PRIVILEGES ON *.* TO 'user'@'%';
 
 2) Что бы большие mysql backup-ы можно было ставить
-    - заходим в PMA проекта и выполняем запрос:
+    - заходим в PMA проекта и выполняем запрос (или можно в той же вкладке Exec от docker-а):
         > SET GLOBAL max_allowed_packet=1073741824;
